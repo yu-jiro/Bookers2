@@ -50,7 +50,7 @@ class BooksController < ApplicationController
 
   def show
     @new_book = Book.new
-    @book = Book.find(params[:id])
+    @book = Book.find(params[:id]) #モデルと紐づいているデータベースのテーブルから、レコードを1つ取り出す場合に使用
     @user = @book.user
     @book_comment = BookComment.new
     @book_comments = @book.book_comments
